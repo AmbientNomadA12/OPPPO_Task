@@ -8,22 +8,22 @@ void Bicycle::setType(const std::string &t)
 {
     type = t;
 }
-void Bicycle::setSpeeds(const int &s)
+void Bicycle::setSpeeds(int s)
 {
     speeds = s;
 }
 
-const std::string Bicycle::getType() const
+std::string Bicycle::getType() const
 {
-    return(type);
+    return type;
 }
-const int Bicycle::getSpeeds() const
+int Bicycle::getSpeeds() const
 {
-    return(speeds);
+    return speeds;
 }
 
 
-Bicycle::Bicycle(int p, std::string m, std::string t, int s)
+Bicycle::Bicycle(int p, const std::string &m, const std::string &t, int s) : Equipment(), type(t), speeds(s)
 {
     setPrice(p);
     setManufacturer(m);

@@ -7,28 +7,29 @@
 #include "Racket.h"
 #include "Bicycle.h"
 
+const int Nsize = 4;
+
 int checkNumberOfThings(const std::string &s)
 {
     int temp = 0;
 
-    for (int i = 0; i < s.size(); ++i)
+    for(int i = 0; i < s.size(); ++i)
     {
         if (s[i] == ';')
         {
             ++temp;
         }
-
     }
 
-    return(temp);
+    return temp;
 }
 
-bool stringParserHelper(const std::string &s, int index, std::string*& properties, int N)
+bool stringParserHelper(const std::string& s, int index, std::string properties[], int N)
 {
     //Thing is symbol ;
     if (checkNumberOfThings(s) != 6)
     {
-        return(false);
+        return false;
     }
 
     for (int i = 0; i < N; ++i)
@@ -38,13 +39,13 @@ bool stringParserHelper(const std::string &s, int index, std::string*& propertie
 
         if (index == -1 || index2 == -1)
         {
-            return(false);
+            return false;
         }
 
         properties[i] = s.substr(index + 1, index2 - index - 1);
     }
 
-    return(true);
+    return true;
 
 }
 
@@ -52,15 +53,16 @@ void commandAdd(const std::string &s, int index, std::vector<Equipment*>& Table)
 {
     std::string type = s.substr(index + 1, s.find_first_of(';', index + 1) - index - 1);
 
-    int N = 4;
-    std::string* properties = new std::string[N];
+    //auto properties = new std::string[N];
+
+    std::string properties[Nsize];
 
     if (type == "ball")
     {
 
-        if (stringParserHelper(s, index, properties, N))
+        if (stringParserHelper(s, index, properties, Nsize))
         {
-            Ball* ball = new Ball(
+            auto ball = new Ball(
                 stoi(properties[0]),
                 properties[1],
                 stoi(properties[2]),
@@ -74,14 +76,12 @@ void commandAdd(const std::string &s, int index, std::vector<Equipment*>& Table)
             std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
         }
 
-        delete[] properties;
-
     }
     else if (type == "rack")
     {
-        if (stringParserHelper(s, index, properties, N))
+        if (stringParserHelper(s, index, properties, Nsize))
         {
-            Racket* racket = new Racket(
+            auto racket = new Racket(
                 stoi(properties[0]),
                 properties[1],
                 stoi(properties[2]),
@@ -95,13 +95,12 @@ void commandAdd(const std::string &s, int index, std::vector<Equipment*>& Table)
             std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
         }
 
-        delete[] properties;
     }
     else if (type == "bicy")
     {
-        if (stringParserHelper(s, index, properties, N))
+        if (stringParserHelper(s, index, properties, Nsize))
         {
-            Bicycle* bicycle = new Bicycle(
+            auto bicycle = new Bicycle(
                 stoi(properties[0]),
                 properties[1],
                 properties[2],
@@ -115,7 +114,6 @@ void commandAdd(const std::string &s, int index, std::vector<Equipment*>& Table)
             std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
         }
 
-        delete[] properties;
     }
     else
     {
@@ -199,12 +197,12 @@ int commandRemHelper(const std::string &symbol, int price, std::vector<Equipment
     {
         return(-1);
     }
-    return(counter);
+    return counter;
 }
 
 void commandRem(const std::string &s, int index, std::vector<Equipment*>& Table)
 {
-    if (Table.size() > 0)
+    if (!Table.empty())
     {
         int index2 = s.find_first_of(';', index + 1);
         std::string whatRemove = s.substr(index + 1, index2 - index - 1);
@@ -283,7 +281,7 @@ void commandRem(const std::string &s, int index, std::vector<Equipment*>& Table)
 
 void commandPrint(std::vector<Equipment*>& Table)
 {
-    if (Table.size() > 0)
+    if (!Table.empty())
     {
         for (int i = 0; i < Table.size(); ++i)
         {

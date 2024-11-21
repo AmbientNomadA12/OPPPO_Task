@@ -30,5 +30,5 @@ int main()
         commandPrint(Table);
     }
 
-    return(0);
+    return 0;
 }

@@ -4,26 +4,26 @@
 #include "Racket.h"
 #include <string>
 
-void Racket::setWeight(const int &w)
+void Racket::setWeight(int w)
 {
     weight = w;
 }
-void Racket::setSize(const int &s)
+void Racket::setSize(int s)
 {
     size = s;
 }
 
-const int Racket::getWeight() const
+int Racket::getWeight() const
 {
-    return(weight);
+    return weight;
 }
-const int Racket::getSize() const
+int Racket::getSize() const
 {
-    return(size);
+    return size;
 }
 
 
-Racket::Racket(int p, std::string m, int w, int s)
+Racket::Racket(int p, const std::string &m, int w, int s) : Equipment(), weight(s), size(s)
 {
     setPrice(p);
     setManufacturer(m);

@@ -17,12 +17,12 @@ private:
 public:
 
     void setType(const std::string &t);
-    void setSpeeds(const int &s);
+    void setSpeeds(int s);
 
-    const std::string getType() const;
-    const int getSpeeds() const;
+    std::string getType() const;
+    int getSpeeds() const;
 
-    Bicycle(int p, std::string m, std::string t, int s);
+    Bicycle(int p, const std::string &m, const std::string &t, int s);
 
     void PRINT() override;
 

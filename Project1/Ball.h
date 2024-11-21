@@ -13,13 +13,13 @@ private:
     std::string material;
 
 public:
-    void setSize(const int &s);
+    void setSize(int s);
     void setMaterial(const std::string &m);
 
     int getSize() const;
     std::string getMaterial() const;
 
-    Ball(int p, std::string m, int s, std::string mm);
+    Ball(int p, const std::string &m, int s, const std::string &mm);
 
     void PRINT() override;
 };

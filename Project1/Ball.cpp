@@ -5,7 +5,7 @@
 #include "Ball.h"
 #include <iostream>
 
-void Ball::setSize(const int &s)
+void Ball::setSize(int s)
 {
     size = s;
 }
@@ -25,7 +25,7 @@ std::string Ball::getMaterial() const
     return material;
 }
 
-Ball::Ball(int p, std::string m, int s, std::string mm) : Equipment(), size(s), material(mm)
+Ball::Ball(int p, const std::string &m, int s, const std::string &mm) : Equipment(), size(s), material(mm)
 {
     setPrice(p);
     setManufacturer(m);

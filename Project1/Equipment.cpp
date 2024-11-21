@@ -4,7 +4,7 @@
 #include "Equipment.h"
 #include <iostream>
 
-void Equipment::setPrice(const int &p)
+void Equipment::setPrice(int p)
 {
     price = p;
 }
@@ -16,11 +16,11 @@ void Equipment::setManufacturer(const std::string &m)
 
 int Equipment::getPrice() const
 {
-    return(price);
+    return price;
 }
 std::string Equipment::getManufacturer() const
 {
-    return(manufacturer);
+    return manufacturer;
 }
 
 void Equipment::PRINT()

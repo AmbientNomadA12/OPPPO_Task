@@ -15,14 +15,14 @@ private:
 
 public:
 
-    void setWeight(const int &w);
-    void setSize(const int &s);
+    void setWeight(int w);
+    void setSize(int s);
 
-    const int getWeight() const;
-    const int getSize() const;
+    int getWeight() const;
+    int getSize() const;
 
 
-    Racket(int p, std::string m, int w, int s);
+    Racket(int p, const std::string &m, int w, int s);
 
     void PRINT() override;
 };
