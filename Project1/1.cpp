@@ -5,7 +5,7 @@
 
 int main()
 {
-    setlocale(LC_ALL, "rus");
+    setlocale(LC_ALL, "ru-RU");
     std::vector<Equipment*> Table;
 
     //Возможность выбрать режим

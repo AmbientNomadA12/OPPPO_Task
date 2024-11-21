@@ -1,15 +1,4 @@
 ﻿  1.cpp
 C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\1.cpp(29,5): warning C4809: в операторе switch имеется ненужная метка "default"; все возможные метки "case" уже заданы
 C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\1.cpp(46,5): warning C4809: в операторе switch имеется ненужная метка "default"; все возможные метки "case" уже заданы
-  Bicycle.cpp
-  logic.cpp
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(36,32): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(37,20): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(209,20): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(218,41): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(222,41): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(248,41): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(301,15): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  Racket.cpp
-  Создание кода...
   Project1.vcxproj -> C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\x64\Debug\Project1.exe
