@@ -256,7 +256,7 @@ void commandRem(const std::string &s, int index, std::vector<Equipment*>& Table)
                     if (Table[i]->getManufacturer() == manufacturer)
                     {
                         ++counter;
-                        (void)Table.erase(Table.begin() + i);
+                        Table.erase(Table.begin() + i);
                     }
                 }
 

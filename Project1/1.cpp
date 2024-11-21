@@ -13,36 +13,21 @@ int main()
     std::cout << "Выберите режим работы: 0 - чтение из файла; 1 - ручной ввод\n(по умолчанию выбран режим 0)\n";
     std::cin >> choice;
 
-    switch (choice)
+    if (choice)
     {
-        case false: 
-            readFromFile(Table);
-            break;
-
-        case true:
-            readFromConsole(Table);
-            break;
-
-        default:
-            readFromFile(Table);
-            break;
+        readFromConsole(Table);
+    }
+    else
+    {
+        readFromFile(Table);
     }
 
     std::cout << "\nВывести массив?\n0 - Да; 1 - Нет\n(по умолчанию выбран режим 0)\n\n";
     std::cin >> choice;
 
-    switch (choice)
+    if (!choice)
     {
-    case false:
         commandPrint(Table);
-        break;
-
-    case true:
-        break;
-
-    default:
-        commandPrint(Table);
-        break;
     }
 
     return(0);
