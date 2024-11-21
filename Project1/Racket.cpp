@@ -4,11 +4,11 @@
 #include "Racket.h"
 #include <string>
 
-void Racket::setWeight(int w)
+void Racket::setWeight(const int &w)
 {
     weight = w;
 }
-void Racket::setSize(int s)
+void Racket::setSize(const int &s)
 {
     size = s;
 }

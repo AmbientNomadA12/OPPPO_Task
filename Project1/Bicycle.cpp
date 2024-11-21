@@ -4,11 +4,11 @@
 #include "Bicycle.h"
 #include <string>
 
-void Bicycle::setType(std::string t)
+void Bicycle::setType(const std::string &t)
 {
     type = t;
 }
-void Bicycle::setSpeeds(int s)
+void Bicycle::setSpeeds(const int &s)
 {
     speeds = s;
 }

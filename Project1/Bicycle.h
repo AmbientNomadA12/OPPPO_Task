@@ -16,8 +16,8 @@ private:
 
 public:
 
-    void setType(std::string t);
-    void setSpeeds(int s);
+    void setType(const std::string &t);
+    void setSpeeds(const int &s);
 
     const std::string getType() const;
     const int getSpeeds() const;

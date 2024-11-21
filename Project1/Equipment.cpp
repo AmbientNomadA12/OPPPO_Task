@@ -4,12 +4,12 @@
 #include "Equipment.h"
 #include <iostream>
 
-void Equipment::setPrice(int p)
+void Equipment::setPrice(const int &p)
 {
     price = p;
 }
 
-void Equipment::setManufacturer(std::string m)
+void Equipment::setManufacturer(const std::string &m)
 {
     manufacturer = m;
 }

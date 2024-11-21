@@ -5,12 +5,12 @@
 #include "Ball.h"
 #include <iostream>
 
-void Ball::setSize(int s)
+void Ball::setSize(const int &s)
 {
     size = s;
 }
 
-void Ball::setMaterial(std::string m)
+void Ball::setMaterial(const std::string &m)
 {
     material = m;
 }

@@ -13,8 +13,8 @@ private:
     std::string material;
 
 public:
-    void setSize(int s);
-    void setMaterial(std::string m);
+    void setSize(const int &s);
+    void setMaterial(const std::string &m);
 
     int getSize() const;
     std::string getMaterial() const;

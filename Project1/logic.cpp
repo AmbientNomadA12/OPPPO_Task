@@ -7,7 +7,7 @@
 #include "Racket.h"
 #include "Bicycle.h"
 
-int checkNumberOfThings(std::string s)
+int checkNumberOfThings(const std::string &s)
 {
     int temp = 0;
 
@@ -23,7 +23,7 @@ int checkNumberOfThings(std::string s)
     return(temp);
 }
 
-bool stringParserHelper(std::string s, int index, std::string*& properties, int N)
+bool stringParserHelper(const std::string &s, int index, std::string*& properties, int N)
 {
     //Thing is symbol ;
     if (checkNumberOfThings(s) != 6)
@@ -33,8 +33,8 @@ bool stringParserHelper(std::string s, int index, std::string*& properties, int 
 
     for (int i = 0; i < N; ++i)
     {
-        index = s.find_first_of(";", index + 1);
-        int index2 = s.find_first_of(";", index + 1);
+        index = s.find_first_of(';', index + 1);
+        int index2 = s.find_first_of(';', index + 1);
 
         if (index == -1 || index2 == -1)
         {
@@ -48,9 +48,9 @@ bool stringParserHelper(std::string s, int index, std::string*& properties, int 
 
 }
 
-void commandAdd(std::string s, int index, std::vector<Equipment*>& Table)
+void commandAdd(const std::string &s, int index, std::vector<Equipment*>& Table)
 {
-    std::string type = s.substr(index + 1, s.find_first_of(";", index + 1) - index - 1);
+    std::string type = s.substr(index + 1, s.find_first_of(';', index + 1) - index - 1);
 
     int N = 4;
     std::string* properties = new std::string[N];
@@ -124,7 +124,7 @@ void commandAdd(std::string s, int index, std::vector<Equipment*>& Table)
 }
 
 //< > <= >= == !=
-int commandRemHelper(std::string symbol, int price, std::vector<Equipment*>& Table)
+int commandRemHelper(const std::string &symbol, int price, std::vector<Equipment*>& Table)
 {
     //Удалено элементов
     int counter = 0;
@@ -202,11 +202,11 @@ int commandRemHelper(std::string symbol, int price, std::vector<Equipment*>& Tab
     return(counter);
 }
 
-void commandRem(std::string s, int index, std::vector<Equipment*>& Table)
+void commandRem(const std::string &s, int index, std::vector<Equipment*>& Table)
 {
     if (Table.size() > 0)
     {
-        int index2 = s.find_first_of(";", index + 1);
+        int index2 = s.find_first_of(';', index + 1);
         std::string whatRemove = s.substr(index + 1, index2 - index - 1);
 
         if (whatRemove == "price")
@@ -215,11 +215,11 @@ void commandRem(std::string s, int index, std::vector<Equipment*>& Table)
             if (checkNumberOfThings(s) == 4)
             {
                 index = index2;
-                index2 = s.find_first_of(";", index + 1);
+                index2 = s.find_first_of(';', index + 1);
                 std::string symbol = s.substr(index + 1, index2 - index - 1);
 
                 index = index2;
-                index2 = s.find_first_of(";", index + 1);
+                index2 = s.find_first_of(';', index + 1);
                 std::string price = s.substr(index + 1, index2 - index - 1);
 
                 int temp = commandRemHelper(symbol, stoi(price), Table);
@@ -245,7 +245,7 @@ void commandRem(std::string s, int index, std::vector<Equipment*>& Table)
             if (checkNumberOfThings(s) == 3)
             {
                 index = index2;
-                index2 = s.find_first_of(";", index + 1);
+                index2 = s.find_first_of(';', index + 1);
 
                 std::string manufacturer = s.substr(index + 1, index2 - index - 1);
 
@@ -256,7 +256,7 @@ void commandRem(std::string s, int index, std::vector<Equipment*>& Table)
                     if (Table[i]->getManufacturer() == manufacturer)
                     {
                         ++counter;
-                        Table.erase(Table.begin() + i);
+                        (void)Table.erase(Table.begin() + i);
                     }
                 }
 
@@ -296,9 +296,9 @@ void commandPrint(std::vector<Equipment*>& Table)
     }
 }
 
-void stringParser(std::string s, std::vector<Equipment*>& Table)
+void stringParser(const std::string &s, std::vector<Equipment*>& Table)
 {
-    int index = s.find_first_of(";");
+    int index = s.find_first_of(';');
 
     if (index != -1)
     {
@@ -359,7 +359,9 @@ void readFromConsole(std::vector<Equipment*>& Table)
     while (getline(std::cin, singleline))
     {
         if (singleline == "-1")
+        {
             break;
+        }
         stringParser(singleline, Table);
     }
 

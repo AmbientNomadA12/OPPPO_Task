@@ -15,8 +15,8 @@ private:
 
 public:
 
-    void setWeight(int w);
-    void setSize(int s);
+    void setWeight(const int &w);
+    void setSize(const int &s);
 
     const int getWeight() const;
     const int getSize() const;

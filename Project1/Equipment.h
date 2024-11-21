@@ -15,8 +15,8 @@ private:
 
 public:
 
-    void setPrice(int p);
-    void setManufacturer(std::string m);
+    void setPrice(const int &p);
+    void setManufacturer(const std::string &m);
 
     int getPrice() const;
     std::string getManufacturer() const;
