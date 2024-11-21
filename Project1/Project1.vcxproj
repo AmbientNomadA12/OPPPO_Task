@@ -128,6 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="Bicycle.cpp" />
+    <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="logic.cpp" />
+    <ClCompile Include="Racket.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="Bicycle.h" />
+    <ClInclude Include="Equipment.h" />
+    <ClInclude Include="logic.h" />
+    <ClInclude Include="Racket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
