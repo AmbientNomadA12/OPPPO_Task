@@ -1,0 +1,7 @@
+ADD;ball;100;Nike and Solomon;5;Cement;
+ADD;ball;20;Adidas;50;Rubber;
+ADD;rack;100;Nike;1500;2;
+ADD;bicy;100;Jupiter;Mountain;6;
+REM;price;<;100;
+REM;manufacturer;Nike;
+PRINT;
