@@ -26,26 +26,34 @@ int checkNumberOfThings(const std::string &s)
 
 bool stringParserHelper(const std::string& s, int index, std::string properties[], int N)
 {
+    bool result = true;
+
     //Thing is symbol ;
     if (checkNumberOfThings(s) != 6)
     {
-        return false;
+        result = false;
     }
-
-    for (int i = 0; i < N; ++i)
+    else
     {
-        index = s.find_first_of(';', index + 1);
-        int index2 = s.find_first_of(';', index + 1);
-
-        if (index == -1 || index2 == -1)
+        for (int i = 0; i < N; ++i)
         {
-            return false;
-        }
+            index = s.find_first_of(';', index + 1);
+            int index2 = s.find_first_of(';', index + 1);
 
-        properties[i] = s.substr(index + 1, index2 - index - 1);
+            if (index == -1 || index2 == -1)
+            {
+                result = false;
+                break;
+                
+            }
+            else
+            {
+                properties[i] = s.substr(index + 1, index2 - index - 1);
+            }
+        }
     }
 
-    return true;
+    return result;
 
 }
 
@@ -195,7 +203,7 @@ int commandRemHelper(const std::string &symbol, int price, std::vector<Equipment
     }
     else
     {
-        return(-1);
+        counter = -1;
     }
     return counter;
 }
