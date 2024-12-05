@@ -1,9 +1,4 @@
-﻿  logic.cpp
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(40,36): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(41,24): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(215,20): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(224,41): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(228,41): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(254,41): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\logic.cpp(307,15): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  Project1.vcxproj -> C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\x64\Debug\Project1.exe
+﻿  1.cpp
+  test.cpp
+  Создание кода...
+  Project1.vcxproj -> C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\x64\Debug\Project1.exe

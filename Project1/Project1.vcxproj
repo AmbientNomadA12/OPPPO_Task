@@ -133,6 +133,7 @@
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="logic.cpp" />
     <ClCompile Include="Racket.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
@@ -140,6 +141,11 @@
     <ClInclude Include="Equipment.h" />
     <ClInclude Include="logic.h" />
     <ClInclude Include="Racket.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project1.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

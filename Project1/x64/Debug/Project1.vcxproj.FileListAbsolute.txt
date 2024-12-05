@@ -1,2 +1,3 @@
 C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\1 лаба\Project1\x64\Debug\Project1.exe
 C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\3\OPPPO_Task\Project1\x64\Debug\Project1.exe
+C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\x64\Debug\Project1.exe

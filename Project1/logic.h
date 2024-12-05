@@ -9,10 +9,11 @@
 #include <vector>
 #include <fstream>
 #include <cmath>
+#include <stdexcept>
 
 class Equipment;
 
-void readFromFile(std::vector<Equipment*>& Table);
+void readFromFile(std::vector<Equipment*>& Table, const std::string& fileName);
 void readFromConsole(std::vector<Equipment*>& Table);
 void commandPrint(std::vector<Equipment*>& Table);
 
