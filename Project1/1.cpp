@@ -2,9 +2,8 @@
 // PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
 
 #include "logic.h"
-#include "test.h"
 
-void doProgram()
+int main()
 {
     setlocale(LC_ALL, "ru-RU");
     std::vector<Equipment*> Table;
@@ -20,7 +19,7 @@ void doProgram()
     }
     else
     {
-        readFromFile(Table, "ist.txt");
+        readFromFile(Table);
     }
 
     std::cout << "\nВывести массив?\n0 - Да; 1 - Нет\n(по умолчанию выбран режим 0)\n\n";
@@ -30,19 +29,6 @@ void doProgram()
     {
         commandPrint(Table);
     }
-}
-
-int main()
-{
-    setlocale(LC_ALL, "ru-RU");
-
-    std::cout << testProgram("1.txt") << std::endl;
-    std::cout << testProgram("2.txt") << std::endl;
-    std::cout << testProgram("3.txt") << std::endl;
-    std::cout << testProgram("4.txt") << std::endl;
-    std::cout << testProgram("5.txt") << std::endl;
-    std::cout << testProgram("6.txt") << std::endl;
-
 
     return 0;
 }

@@ -33,9 +33,6 @@
     <ClCompile Include="Bicycle.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="logic.h">
@@ -53,16 +50,5 @@
     <ClInclude Include="Bicycle.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="test.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Project1.rc">
-      <Filter>Файлы ресурсов</Filter>
-    </ResourceCompile>
   </ItemGroup>
 </Project>

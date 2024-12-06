@@ -81,8 +81,7 @@ void commandAdd(const std::string &s, int index, std::vector<Equipment*>& Table)
         }
         else
         {
-            throw std::logic_error("В строке \"" + s + "\" обнаружена ошибка!");
-            //std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
+            std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
         }
 
     }
@@ -101,8 +100,7 @@ void commandAdd(const std::string &s, int index, std::vector<Equipment*>& Table)
         }
         else
         {
-            throw std::logic_error("В строке \"" + s + "\" обнаружена ошибка!");
-            //std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
+            std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
         }
 
     }
@@ -121,15 +119,13 @@ void commandAdd(const std::string &s, int index, std::vector<Equipment*>& Table)
         }
         else
         {
-            throw std::logic_error("В строке \"" + s + "\" обнаружена ошибка!");
-            //std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
+            std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
         }
 
     }
     else
     {
-        throw std::logic_error("Ошибка! Тип " + type + " не распознан!\n");
-        //std::cout << "Ошибка! Тип " << type << " не распознан!\n";
+        std::cout << "Ошибка! Тип " << type << " не распознан!\n";
     }
 }
 
@@ -240,15 +236,13 @@ void commandRem(const std::string &s, int index, std::vector<Equipment*>& Table)
                 }
                 else
                 {
-                    throw std::logic_error("Символ \"" + symbol + "\" не распознан!\n");
-                    //std::cout << "Символ \"" << symbol << "\" не распознан!\n";
+                    std::cout << "Символ \"" << symbol << "\" не распознан!\n";
                 }
 
             }
             else
             {
-                throw std::logic_error("В строке \"" + s + "\" обнаружена ошибка!");
-                //std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
+                std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
             }
 
         }
@@ -277,21 +271,18 @@ void commandRem(const std::string &s, int index, std::vector<Equipment*>& Table)
             }
             else
             {
-                throw std::logic_error("В строке \"" + s + "\" обнаружена ошибка!");
-                //std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
+                std::cout << "В строке \"" << s << "\" обнаружена ошибка!\n";
             }
 
         }
         else
         {
-            throw std::logic_error("Команда \"" + whatRemove + "\" на удаление не распознана!");
-            //std::cout << "Команда \"" << whatRemove << "\" на удаление не распознана!\n";
+            std::cout << "Команда \"" << whatRemove << "\" на удаление не распознана!\n";
         }
     }
     else
     {
-        throw std::logic_error("Ошибка REM! Массив пустой! Нечего удалять!");
-        //std::cout << "Ошибка REM! Массив пустой! Нечего удалять!\n";
+        std::cout << "Ошибка REM! Массив пустой! Нечего удалять!\n";
     }
 
 }
@@ -307,8 +298,7 @@ void commandPrint(std::vector<Equipment*>& Table)
     }
     else
     {
-        throw std::logic_error("Ошибка PRINT! Массив пустой! Нечего печатать!");
-        //std::cout << "Ошибка PRINT! Массив пустой! Нечего печатать!\n";
+        std::cout << "Ошибка PRINT! Массив пустой! Нечего печатать!\n";
     }
 }
 
@@ -334,21 +324,18 @@ void stringParser(const std::string &s, std::vector<Equipment*>& Table)
         }
         else
         {
-            throw std::logic_error("Ошибка! Команда " + command + " не распознана!");
-            //std::cout << "Ошибка! Команда " << command << " не распознана!\n";
+            std::cout << "Ошибка! Команда " << command << " не распознана!\n";
         }
     }
     else
     {
-        throw std::logic_error("Ошибка! Неправильная структура файла");
-        //std::cout << "Ошибка!\n";
+        std::cout << "Ошибка!\n";
     }
 }
 
-void readFromFile(std::vector<Equipment*>& Table, const std::string& fileName)
+void readFromFile(std::vector<Equipment*>& Table)
 {
-
-    std::ifstream commands(fileName);
+    std::ifstream commands("ist.txt");
 
     if (commands)
     {
@@ -363,8 +350,7 @@ void readFromFile(std::vector<Equipment*>& Table, const std::string& fileName)
     }
     else
     {
-        throw std::logic_error("Ошибка открытия файла");
-        //std::cout << "Ошибка открытия файла";
+        std::cout << "Ошибка открытия файла";
     }
 
     commands.close();
