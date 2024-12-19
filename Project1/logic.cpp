@@ -333,9 +333,9 @@ void stringParser(const std::string &s, std::vector<Equipment*>& Table)
     }
 }
 
-void readFromFile(std::vector<Equipment*>& Table)
+void readFromFile(std::vector<Equipment*>& Table, std::string& FileName)
 {
-    std::ifstream commands("ist.txt");
+    std::ifstream commands(FileName);
 
     if (commands)
     {

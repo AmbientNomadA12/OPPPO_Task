@@ -1,0 +1,3 @@
+ADD;ball;100;Nike and Solomon;5;Cement;
+ADD;ball;200;Adidas;5;Cement;
+REM;price;>;100;

@@ -12,7 +12,7 @@
 
 class Equipment;
 
-void readFromFile(std::vector<Equipment*>& Table);
+void readFromFile(std::vector<Equipment*>& Table, std::string& FileName);
 void readFromConsole(std::vector<Equipment*>& Table);
 void commandPrint(std::vector<Equipment*>& Table);
 
