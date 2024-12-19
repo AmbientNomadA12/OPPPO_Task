@@ -1,2 +1,10 @@
-﻿  1.cpp
+﻿  logic.cpp
+C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\logic.cpp(40,36): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\logic.cpp(41,24): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\logic.cpp(220,20): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\logic.cpp(229,41): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\logic.cpp(233,41): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\logic.cpp(259,41): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\logic.cpp(312,15): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  LINK : не найден или не выполнена сборка C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\x64\Debug\Project1.exe при последней инкрементной компоновке; выполняется полная компоновка
   Project1.vcxproj -> C:\Users\stalo\OneDrive\Рабочий стол\уник\Четвертый Курс\ОПППО\4\OPPPO_Task\Project1\x64\Debug\Project1.exe

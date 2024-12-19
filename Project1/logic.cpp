@@ -46,6 +46,11 @@ bool stringParserHelper(const std::string& s, int index, std::string properties[
                 break;
                 
             }
+            else if (index == index2 - 1)
+            {
+                result = false;
+                break;
+            }
             else
             {
                 properties[i] = s.substr(index + 1, index2 - index - 1);
